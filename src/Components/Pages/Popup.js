@@ -18,12 +18,15 @@ const Popup = () => {
     
     return (
         <div>
-            <div className="row mt-5 ms-4">
+            <div className='d-flex  align-items-center justify-content-center'>
+                <SendData />
+            </div>
+            <div className="row mt-5 ms-3">
                 <div className="col-md-5 ">
                     <Accordion
                         defaultActiveKey={['0']} alwaysOpen>     
-                        <Accordion.Item eventKey="0">
-                            <Accordion.Header>Edit Title</Accordion.Header>
+                        <Accordion.Item  eventKey="0">
+                            <Accordion.Header >Edit Title</Accordion.Header>
                             <Accordion.Body >
                                 <div className='d-flex flex-column align-items-center justify-content-center'>
                                     <div className="row">
@@ -42,6 +45,7 @@ const Popup = () => {
                                             <TitleAligment />
                                         </div>
                                     </div>
+ 
                                 </div>
                                 <TitleTextBox />
                             </Accordion.Body>
@@ -70,7 +74,7 @@ const Popup = () => {
                 <div className="col-md-7">
                     <PopupCard/>
                 </div>
-               <SendData/>
+            
             </div>
         </div>
 

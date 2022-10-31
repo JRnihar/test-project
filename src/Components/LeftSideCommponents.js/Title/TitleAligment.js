@@ -44,7 +44,7 @@ const TitleAligment = () => {
         setAllValues({ ...allValues, sections: tempPopupValues });
 
     }
-
+console.log(allValues);
    
     return (
         <div>
@@ -69,6 +69,7 @@ const TitleAligment = () => {
                         ))
                 }
             </TextField>
+            
         </div >
 
     );

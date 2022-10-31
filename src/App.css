@@ -1,0 +1,12 @@
+.accordion-button::after {
+   color: black !important;
+    background-image: url("./Assets/images/icon1.jpg") !important;
+ 
+}
+
+.accordion-button::after {
+    background-image: url('./Assets/images/icon1.jpg') !important;
+    
+}
+
+/* #5E5C5C  */

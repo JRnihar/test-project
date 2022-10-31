@@ -23,13 +23,13 @@ const SendData = () => {
         }).then(res => res.json())
             .then(res => {
                 alert('are you sure ,you want to add data?')
-                
+                console.log(res);
             });
     }
 
     return (
-        <div class="d-grid gap-2">
-            <button onClick={handleSubmit} className='btn btn-success mt-3' >Send Data</button>
+        <div class="gap-2">
+            <button onClick={handleSubmit} className='btn btn-success mt-3' >Save Data</button>
         </div>
     );
 };
