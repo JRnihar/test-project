@@ -21,14 +21,14 @@ const Popup = () => {
             <div className='d-flex  align-items-center justify-content-center'>
                 <SendData />
             </div>
-            <div className="row mt-5 ms-3">
+            <div className="row mt-5 ms-2">
                 <div className="col-md-5 ">
                     <Accordion
                         defaultActiveKey={['0']} alwaysOpen>     
                         <Accordion.Item  eventKey="0">
                             <Accordion.Header >Edit Title</Accordion.Header>
                             <Accordion.Body >
-                                <div className='d-flex flex-column align-items-center justify-content-center'>
+                                <div >
                                     <div className="row">
                                         <div className="col-md-6">
                                             <TitleFontfamily />
@@ -54,7 +54,7 @@ const Popup = () => {
                         <Accordion.Item eventKey="1">
                             <Accordion.Header>Edit Button</Accordion.Header>
                             <Accordion.Body >
-                                <div className='d-flex flex-column align-items-center justify-content-center'>  
+                                <div >  
                                     <div className="row mt-5">
                                         <div className="col-md-6">
                                             <ButtonFontColor />

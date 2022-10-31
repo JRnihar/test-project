@@ -6,14 +6,14 @@ const SendData = () => {
     
     //get data
     useEffect(() => {
-        fetch('http://localhost:5000/abc')
+        fetch('http://localhost:5000/api/v1/abc')
             .then(res => res.json())
             .then(data => console.log(data));
 
     }, [])
     //post data
     const handleSubmit = () => {
-        fetch('http://localhost:5000/abc', {
+        fetch('http://localhost:5000/api/v1/abc', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json, text/plain, */*',

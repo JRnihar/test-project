@@ -7,7 +7,7 @@ const PopupCard = () => {
     const [allValues] = useContext(PopupContext);
 
     return (
-        <Card style={{ width: '45rem', background: 'rgb(0,0,0,0.1)', height: '25rem' }}>
+        <Card style={{ width: '40rem', background: 'rgb(0,0,0,0.1)', height: '25rem' }}>
             <Card.Body>
                 <div className="card p-2 align-items-center mt-4 shadow-lg  bg-body rounded">
                     <div className="row  ">
