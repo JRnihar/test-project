@@ -1,10 +1,30 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Card from 'react-bootstrap/Card';
-import { PopupContext } from '../../App';
-import DummyImg from '../../Assets/images/dummyImg.jpg';
+import { useParams } from 'react-router-dom';
+import { PopupContext } from '../../../App';
+// import { PopupContext } from '../../App';
+import DummyImg from '../../../Assets/images/dummyImg.jpg';
+import { getListDetail } from '../../../services/list.services';
 
 const PopupCard = () => {
     const [allValues] = useContext(PopupContext);
+    const [singleList, setSingleList] = useState({});
+    const { Id } = useParams();
+    const loadListDetails = async (Id) => {
+        try {
+            const response = await getListDetail(Id);
+
+            if (response) {
+                setSingleList(response.data);
+            }
+        } catch (error) {
+            return error;
+        }
+    };
+    useEffect(() => {
+        loadListDetails(Id);
+    }, []);
+    // console.log(service.data.name);
 
     return (
         <Card style={{ width: '40rem', background: 'rgb(0,0,0,0.1)', height: '25rem' }}>
@@ -12,12 +32,13 @@ const PopupCard = () => {
                 <div className="card p-2 align-items-center mt-4 shadow-lg  bg-body rounded">
                     <div className="row  ">
                         <div className="col-md-6">
-                            <img className='img-fluid rounded mt-3' src={DummyImg} alt="" />
+                            <img className='img-fluid rounded mt-3' src={singleList?.data?.picture} alt="" />
                         </div>
                         <div className="col-md-6">
                             {/* <h3 className='text-center'>Cartoon Images</h3> */}
-                            <h1 style={{ fontSize: ` ${allValues?.sections[1].setting.customCSS.fontSize}`, textAlign: ` ${allValues?.sections[1].setting.customCSS.textAlign}`, fontFamily: `${allValues?.sections[1].setting.customCSS.fontFamily}`, color: `${allValues?.sections[1].setting.customCSS.color}` }}>{allValues?.sections[1].setting.customCSS.text? allValues?.sections[1].setting.customCSS.text:'Cartoon Image'}</h1>
-                            <p className='text-center'>We remeber those our old day</p>
+                            <h3 style={{ fontSize: ` ${allValues?.sections[1].setting.customCSS.fontSize}`, textAlign: ` ${allValues?.sections[1].setting.customCSS.textAlign}`, fontFamily: `${allValues?.sections[1].setting.customCSS.fontFamily}`, color: `${allValues?.sections[1].setting.customCSS.color}` }}>{allValues?.sections[1].setting.customCSS.text ? allValues?.sections[1].setting.customCSS.text : singleList?.data?.name}</h3>
+                            <p >Email : {singleList?.data?.email}</p>
+                            <p >Phone : {singleList?.data?.phone}</p>
                             <input class="form-control form-control-lg mt-3" type="text" placeholder="Exmaple@gmai.com" aria-label=".form-control-lg example" />
                             <div class="d-grid gap-2">
                                 <button style={{ backgroundColor: `${allValues?.sections[4].setting.customCSS.backgroundColor}`, textAlign: ` ${allValues?.sections[4].setting.customCSS.textAlign}`, }} class="btn btn-success mt-3" type="button">{allValues?.sections[4].setting.customCSS.text ? allValues?.sections[4].setting.customCSS.text : 'Subcribe'}</button>
