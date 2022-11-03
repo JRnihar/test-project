@@ -27,15 +27,21 @@ const Header = () => {
                     <Link to='/' class="navbar-brand ms-5" href="#">Test Project</Link>
                     <ul class="navbar-nav m ms-auto mb-2 mb-lg-0">
                         <li class="nav-item me-5">
-                            <Link to='/' class="nav-link active" aria-current="page" href="#">Home</Link>
+                            <button className='btn btn-outline-primary'><Link to='/' class="nav-link active" aria-current="page" >Home</Link></button>
                         </li>
-                        <li class="nav-item me-5">
+                        
+                        <li class="nav-item \">
                             {
                                 user
                                 ?
-                                    <button className='btn btn-outline-primary ' onClick={handleSignOut} > LogOut</button>
+                                    <>
+                                        
+                                        <button className='btn btn-outline-primary me-5 '>  <Link to='/allList' class="nav-link" aria-current="page" >List</Link></button>
+                                        
+                                        <button className='btn btn-outline-primary ' onClick={handleSignOut} > LogOut</button>
+                                    </>
                                 :
-                                    <button className='btn btn-outline-primary' ><Link to='/login' class="nav-link t">Login</Link></button> 
+                                    <button className='btn btn-outline-primary' ><Link to='/login' class="nav-link">Login</Link></button> 
                             }
                             
                         </li> 

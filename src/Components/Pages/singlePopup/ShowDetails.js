@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { getListDetail } from '../../../services/list.services';
-import { useParams } from 'react-router-dom';
 import { Accordion } from 'react-bootstrap';
 import TitleFontfamily from '../../LeftSideCommponents.js/Title/TitleFontfamily';
 import TitleFontSize from '../../LeftSideCommponents.js/Title/TitleFontSize';
@@ -11,12 +9,12 @@ import ButtonFontAligment from '../../LeftSideCommponents.js/Button/ButtonFontAl
 import ButtonTextBox from '../../LeftSideCommponents.js/Button/ButtonTextBox';
 import TitleTextBox from '../../LeftSideCommponents.js/Title/TitleTextBox';
 import PopupCard from './PopupCard';
+import SendData from './SendData';
 const ShowDetails = () => {
- 
     return (
         <div>
             <div className='d-flex  align-items-center justify-content-center'>
-                {/* <SendData /> */}
+                <SendData />
             </div>
             <div className="row mt-5 ms-2">
                 <div className="col-md-5 ">

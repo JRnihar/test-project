@@ -8,6 +8,7 @@ import Regestation from './Components/Authentication/Regestation';
 import Header from './Components/Pages/Navbar/Header';
 import RequireAuth from './Components/Authentication/RequireAuth';
 import ShowDetails from './Components/Pages/singlePopup/ShowDetails';
+import CreateList from './Components/CreateList/CreateList';
 
 
 export const PopupContext = createContext();
@@ -31,6 +32,12 @@ export default function App() {
           <RequireAuth>
             <ShowDetails />
           </RequireAuth>} />
+        
+        <Route path="allList" element={
+          <RequireAuth>
+            <CreateList />
+          </RequireAuth>
+        } />
         <Route path="login" element={<Login />} />
         <Route path="reg" element={<Regestation />} />
       </Routes>
