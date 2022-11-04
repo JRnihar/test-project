@@ -30,7 +30,7 @@ const TitleForntColor = () => {
     return (
         <div className='border p-2 shadow rounded'>
             <label htmlFor="">Title Font Color</label>
-            <input onBlur={(e) => handlePopupChange(e, "title", "color")} className='mt-2 w-full'  type="color" name="" id="" />
+            <input onChange={(e) => handlePopupChange(e, "title", "color")} className='mt-2 w-full'  type="color" name="" id="" />
            
         </div>
     );

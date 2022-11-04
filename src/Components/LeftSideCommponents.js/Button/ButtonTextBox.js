@@ -28,7 +28,7 @@ const ButtonTextBox = () => {
     return (
         <div class="form-floating">
             <textarea name="text"
-                onBlur={(e) => handlePopupChange(e, "button", "text")} class="form-control w-100 mt-3" placeholder="Leave a comment here" id="floatingTextarea2" style={{ height: "100px" }}></textarea>
+                onChange={(e) => handlePopupChange(e, "button", "text")} class="form-control w-100 mt-3" placeholder="Leave a comment here" id="floatingTextarea2" style={{ height: "100px" }}></textarea>
             <label for="floatingTextarea2">Change text</label>
         </div>
     );

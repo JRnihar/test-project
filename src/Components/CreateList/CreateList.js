@@ -1,28 +1,40 @@
-import axios from 'axios';
+
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+
 import auth from '../../firebase.init';
+import { getCutomerCard } from '../../services/list.services';
+import SeeCustomerList from './SeeCustomerList';
 const CreateList = () => {   
     const [products, setProduct] = useState([])
+  
     const [user] = useAuthState(auth)
     const email = user?.email
     useEffect(() => {
-        const run = async () => {
-            await axios
-                .get(`http://localhost:5000/api/v1/test/${email}`)
-                .then(function (res) {
-                    setProduct(res.data)
-                })
+        loadAllData(email);
+    }, [products,email]);
+
+    const loadAllData = async (email) => {
+        try {
+            const response = await getCutomerCard(email);
+
+            if (response) {
+                setProduct(response.data);
+               
+            }
+        } catch (error) {
+            return error;
         }
-        run()
-    }, [])
+    };
     
    
     return (
-        <div>
+        <div className='container'>
+            <div className="row row-cols-1 row-cols-md-3 g-3">
             {
-                products?.data?.map(t => <h1 style={{ fontSize: ` ${t.allValues?.sections[1].setting.customCSS.fontSize}`, textAlign: ` ${t.allValues?.sections[1].setting.customCSS.textAlign}`, fontFamily: `${t.allValues?.sections[1].setting.customCSS.fontFamily}`, color: `${t.allValues?.sections[1].setting.customCSS.color}` }}>{t?.allValues?.sections[1].setting?.customCSS?.text}</h1>)
+                products?.data?.map(list => <SeeCustomerList list={list}/>)
             }
+            </div>
         </div>
     );
 };

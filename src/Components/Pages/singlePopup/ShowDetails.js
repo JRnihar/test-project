@@ -13,8 +13,11 @@ import SendData from './SendData';
 const ShowDetails = () => {
     return (
         <div>
-            <div className='d-flex  align-items-center justify-content-center'>
+         <div className="container">
                 <SendData />
+         </div>
+            <div className='d-flex  align-items-center justify-content-center'>
+                
             </div>
             <div className="row mt-5 ms-2">
                 <div className="col-md-5 ">

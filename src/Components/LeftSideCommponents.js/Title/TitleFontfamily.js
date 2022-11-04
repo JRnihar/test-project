@@ -54,7 +54,7 @@ const TitleFontfamily = () => {
             label="Font Family"
             name="fontFamily"
             // value={allValues.fontFamily}
-            onBlur={(e) => handlePopupChange(e, "title", "fontFamily")}
+            onChange={(e) => handlePopupChange(e, "title", "fontFamily")}
             helperText="Please select wait your font Family"
         >
             {fontFamily.map((option) => (

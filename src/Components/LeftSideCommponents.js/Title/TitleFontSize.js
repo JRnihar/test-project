@@ -51,7 +51,7 @@ const TitleFontSize = () => {
             label="Font Size"
             name="fontSize"
             // value={allValues.fontSize}
-            onBlur={(e) => handlePopupChange(e, "title", "fontSize")}
+            onChange={(e) => handlePopupChange(e, "title", "fontSize")}
             helperText="Please select wait your fontSize"
         >
             {fontSize.map((option) => (

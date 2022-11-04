@@ -31,7 +31,7 @@ const ButtonFontColor = () => {
         <div className='border p-2 shadow rounded'>
             <label htmlFor="">Button Background Color</label>
             <input name='backgroundColor'
-                onBlur={(e) => handlePopupChange(e, "button", "backgroundColor")} className='mt-2 w-full' type="color" id="" />
+                onChange={(e) => handlePopupChange(e, "button", "backgroundColor")} className='mt-2 w-full' type="color" id="" />
 
         </div>
     );

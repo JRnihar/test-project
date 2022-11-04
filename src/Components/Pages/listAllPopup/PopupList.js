@@ -26,8 +26,9 @@ const PopupList = () => {
         
     return (
         <div className='bg-black'>
+           
            <div className="container  ">
-                <DiscountModal/>
+                <DiscountModal /> 
                 <div className="row row-cols-1 row-cols-md-3 g-3">    
                     {
                         lists?.data?.map(list=><ShowAllList list={list}/>)

@@ -57,7 +57,7 @@ console.log(allValues);
                 name="textAlign
 "
                 // value={allValues.fontFamily}
-                onBlur={(e) => handlePopupChange(e, "title", "textAlign")}
+                onChange={(e) => handlePopupChange(e, "title", "textAlign")}
                 helperText="Please select wait your font Family"
             >
                 {

@@ -56,7 +56,7 @@ const ButtonFontAligment = () => {
                 name="textAlign
 "
                 // value={allValues.fontFamily}
-                onBlur={(e) => handlePopupChange(e, "button", "textAlign")}
+                onChange={(e) => handlePopupChange(e, "button", "textAlign")}
                 helperText="Please select wait your font Family"
             >
                 {
