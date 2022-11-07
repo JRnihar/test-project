@@ -1,17 +1,5 @@
 {
-    "_id": 12313,
-    "popupSettings": {
-        "duration": "",
-        "position": "",
-        "customCSS": {
-            "borderWidth": "",
-            "borderStyle": "",
-            "borderColor": "",
-            "borderRadius": "",
-            "backgroundColor": "",
-            "backgroundImage": ""
-        }
-    },
+   
     "sections": [
         {
             "type": "COVER_IMAGE",

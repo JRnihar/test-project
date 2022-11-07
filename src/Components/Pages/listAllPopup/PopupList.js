@@ -25,7 +25,7 @@ const PopupList = () => {
     };
         
     return (
-        <div className='bg-black'>
+        <div className='cards-bg'>
            
            <div className="container  ">
                 <DiscountModal /> 

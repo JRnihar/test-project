@@ -27,7 +27,7 @@ const Header = () => {
                     <Link to='/' class="navbar-brand ms-5" href="#">Test Project</Link>
                     <ul class="navbar-nav m ms-auto mb-2 mb-lg-0">
                         <li class="nav-item me-5">
-                            <button className='btn btn-outline-primary'><Link to='/' class="nav-link active" aria-current="page" >Home</Link></button>
+                            <button className='btn btn-outline-primary '><Link to='/' class="nav-link active" aria-current="page" >Home</Link></button>
                         </li>
                         
                         <li class="nav-item \">

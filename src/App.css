@@ -4,9 +4,21 @@
  
 }
 
-.accordion-button::after {
-    background-image: url('./Assets/images/icon1.jpg') !important;
+/* .accordion-button::before {
+    background-image: url('./Assets/images/Icon.png') !important;
     
-}
+} */
 
 /* #5E5C5C  */
+.bg{
+    background-image: url("../src/Assets/images/download.png");
+    height: 100vh !important;
+}
+.cards-bg{
+    background-image: url("../src/Assets/images/download.png");
+    /* height: 100vh !important; */
+}
+
+* {
+    font-family: 'Public Sans', sans-serif;
+}

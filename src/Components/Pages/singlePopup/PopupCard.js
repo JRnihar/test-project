@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { PopupContext } from '../../../App';
 // import { PopupContext } from '../../App';
 import DummyImg from '../../../Assets/images/dummyImg.jpg';
-import { getListDetail } from '../../../services/list.services';
+import { getAllCutomerCard, getListDetail, updateAllList } from '../../../services/list.services';
 
 const PopupCard = () => {
     const [allValues] = useContext(PopupContext);
@@ -24,12 +24,15 @@ const PopupCard = () => {
     useEffect(() => {
         loadListDetails(Id);
     }, []);
+
+
+    
     // console.log(service.data.name);
 
     return (
-        <Card style={{ width: '40rem', background: 'rgb(0,0,0,0.1)', height: '25rem' }}>
+        <Card className='mb-5' style={{ width: '40rem', background: 'rgb(0,0,0,0.1)', height: '25rem' }}>
             <Card.Body>
-                <div className="card p-2 align-items-center mt-4 shadow-lg  bg-body rounded">
+                <div className="card pe-4 pt-3 align-items-center mt-4 shadow-lg  bg-body rounded">
                     <div className="row  ">
                         <div className="col-md-6">
                             <img className='img-fluid rounded mt-3' src={singleList?.data?.picture} alt="" />

@@ -28,9 +28,9 @@ const TitleForntColor = () => {
     }
 
     return (
-        <div className='border p-2 shadow rounded'>
+        <div className='border p-3 shadow-sm rounded d-flex flex-cloumn justify-content-center align-items-center'>
             <label htmlFor="">Title Font Color</label>
-            <input onChange={(e) => handlePopupChange(e, "title", "color")} className='mt-2 w-full'  type="color" name="" id="" />
+            <input onChange={(e) => handlePopupChange(e, "title", "color")} className=' w-full ms-3'  type="color" name="" id="" />
            
         </div>
     );

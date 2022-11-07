@@ -9,6 +9,7 @@ import Header from './Components/Pages/Navbar/Header';
 import RequireAuth from './Components/Authentication/RequireAuth';
 import ShowDetails from './Components/Pages/singlePopup/ShowDetails';
 import CreateList from './Components/CreateList/CreateList';
+import UpdateList from './Components/CreateList/UpdateList';
 
 
 export const PopupContext = createContext();
@@ -21,27 +22,34 @@ export default function App() {
     )
   }, [])
   return (
-    <PopupContext.Provider value={[allValues, setAllValues]}>
-      <Header />
-      <Routes>
-        <Route path="/" element={
-          <RequireAuth>
-            <PopupList />
-          </RequireAuth>} />
-        <Route path="/:Id" element={
-          <RequireAuth>
-            <ShowDetails />
-          </RequireAuth>} />
-        
-        <Route path="allList" element={
-          <RequireAuth>
-            <CreateList />
-          </RequireAuth>
-        } />
-        <Route path="login" element={<Login />} />
-        <Route path="reg" element={<Regestation />} />
-      </Routes>
-    </PopupContext.Provider>
+    
+      <PopupContext.Provider value={[allValues, setAllValues]}>
+        <Header />
+        <Routes>
+          <Route path="/" element={
+            <RequireAuth>
+              <PopupList />
+            </RequireAuth>} />
+          <Route path="/:Id" element={
+            <RequireAuth>
+              <ShowDetails />
+            </RequireAuth>} />
+
+          <Route path="allList" element={
+            <RequireAuth>
+              <CreateList />
+            </RequireAuth>
+          } />
+          <Route path="allList/:Id" element={
+            <RequireAuth>
+              <UpdateList />
+            </RequireAuth>
+          } />
+          <Route path="login" element={<Login />} />
+          <Route path="reg" element={<Regestation />} />
+        </Routes>
+      </PopupContext.Provider>
+    
   );
 }
 

@@ -1,24 +1,30 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Accordion } from 'react-bootstrap';
-import TitleFontfamily from '../../LeftSideCommponents.js/Title/TitleFontfamily';
-import TitleFontSize from '../../LeftSideCommponents.js/Title/TitleFontSize';
-import TitleForntColor from '../../LeftSideCommponents.js/Title/TitleForntColor';
-import TitleAligment from '../../LeftSideCommponents.js/Title/TitleAligment';
-import ButtonFontColor from '../../LeftSideCommponents.js/Button/ButtonFontColor';
-import ButtonFontAligment from '../../LeftSideCommponents.js/Button/ButtonFontAligment';
-import ButtonTextBox from '../../LeftSideCommponents.js/Button/ButtonTextBox';
-import TitleTextBox from '../../LeftSideCommponents.js/Title/TitleTextBox';
-import PopupCard from './PopupCard';
-import SendData from './SendData';
-const ShowDetails = () => {
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { useParams } from 'react-router-dom';
+import { PopupContext } from '../../App';
+import auth from '../../firebase.init';
+import { getAllCutomerCard, getCutomerCard, updateList } from '../../services/list.services';
+import ButtonFontAligment from '../LeftSideCommponents.js/Button/ButtonFontAligment';
+import ButtonFontColor from '../LeftSideCommponents.js/Button/ButtonFontColor';
+import ButtonTextBox from '../LeftSideCommponents.js/Button/ButtonTextBox';
+import TitleAligment from '../LeftSideCommponents.js/Title/TitleAligment';
+import TitleFontfamily from '../LeftSideCommponents.js/Title/TitleFontfamily';
+import TitleFontSize from '../LeftSideCommponents.js/Title/TitleFontSize';
+import TitleForntColor from '../LeftSideCommponents.js/Title/TitleForntColor';
+import TitleTextBox from '../LeftSideCommponents.js/Title/TitleTextBox';
+import PopupCard from '../Pages/singlePopup/PopupCard';
+import ShowDetails from '../Pages/singlePopup/ShowDetails';
+import UpdatePopupCard from './UpdatePopupCard';
+
+const UpdateList = () => {
+    
     return (
         <div className='bg'>
-         <div className="container">
-                <SendData />
-         </div>
-            <div className="row mt-5 ms-2 mb-5">
+          
+            <div className="row ms-2 mb-5">
                 <div className="col-md-5 ">
-                    <Accordion
+                    <Accordion className='mt-5'
                         defaultActiveKey={['0']} alwaysOpen>
                         <Accordion.Item eventKey="0">
                             <Accordion.Header >Edit Title</Accordion.Header>
@@ -67,7 +73,7 @@ const ShowDetails = () => {
                     </Accordion>
                 </div>
                 <div className="col-md-7">
-                    <PopupCard />
+                    <UpdatePopupCard/>
                 </div>
 
             </div>
@@ -75,4 +81,4 @@ const ShowDetails = () => {
     );
 };
 
-export default ShowDetails;
+export default UpdateList;
