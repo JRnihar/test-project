@@ -39,7 +39,7 @@ const PopupCard = () => {
                         </div>
                         <div className="col-md-6">
                             {/* <h3 className='text-center'>Cartoon Images</h3> */}
-                            <h3 style={{ fontSize: ` ${allValues?.sections[1].setting.customCSS.fontSize}`, textAlign: ` ${allValues?.sections[1].setting.customCSS.textAlign}`, fontFamily: `${allValues?.sections[1].setting.customCSS.fontFamily}`, color: `${allValues?.sections[1].setting.customCSS.color}` }}>{allValues?.sections[1].setting.customCSS.text ? allValues?.sections[1].setting.customCSS.text : singleList?.data?.name}</h3>
+                            <h3 style={{ fontSize: ` ${allValues?.sections[1].setting.customCSS.fontSize}`, textAlign: ` ${allValues?.sections[1].setting.customCSS.textAlign}`, fontFamily: `${allValues?.sections[1].setting.customCSS.fontFamily}`, color:`${allValues?.sections[1].setting.customCSS.color}` }}>{allValues?.sections[1].setting.customCSS.text ? allValues?.sections[1].setting.customCSS.text : singleList?.data?.name}</h3>
                             <p >Email : {singleList?.data?.email}</p>
                             <p >Phone : {singleList?.data?.phone}</p>
                             <input class="form-control form-control-lg mt-3" type="text" placeholder="Exmaple@gmai.com" aria-label=".form-control-lg example" />

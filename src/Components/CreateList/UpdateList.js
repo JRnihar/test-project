@@ -23,14 +23,14 @@ const UpdateList = () => {
         <div className='bg'>
           
             <div className="row ms-2 mb-5">
-                <div className="col-md-5 ">
+                <div className="col-md-5 mt-5 ">
                     <Accordion className='mt-5'
                         defaultActiveKey={['0']} alwaysOpen>
                         <Accordion.Item eventKey="0">
                             <Accordion.Header >Edit Title</Accordion.Header>
                             <Accordion.Body >
                                 <div >
-                                    <div className="row">
+                                    <div className="row ">
                                         <div className="col-md-6">
                                             <TitleFontfamily />
                                         </div>
