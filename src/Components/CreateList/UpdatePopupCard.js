@@ -81,10 +81,10 @@ const UpdatePopupCard = () => {
                         <div className="row  ">
                             <div className="col-md-12">
                                 {/* <h3 className='text-center'>Cartoon Images</h3> */}
-                                <h3 style={{ fontSize: ` ${allValues?.sections[1].setting.customCSS.fontSize}`, textAlign: ` ${allValues?.sections[1].setting.customCSS.textAlign}`, fontFamily: `${allValues?.sections[1].setting.customCSS.fontFamily}`, color: `${allValues?.sections[1].setting.customCSS.color}` }}>{allValues?.sections[1].setting.customCSS.text ? allValues?.sections[1].setting.customCSS.text : product?.allValues?.sections[1].setting.customCSS.text}</h3>
+                                <h3 style={{ fontSize: ` ${product?.allValues?.sections[1].setting.customCSS.fontSize}`, textAlign: ` ${product?.allValues?.sections[1].setting.customCSS.textAlign}`, fontFamily: `${product?.allValues?.sections[1].setting.customCSS.fontFamily}`, color: `${product?.allValues?.sections[1].setting.customCSS.color}` }}>{allValues?.sections[1].setting.customCSS.text ? allValues?.sections[1].setting.customCSS.text : product?.allValues?.sections[1].setting.customCSS.text}</h3>
                                 <p >Email :{email}</p>
                                 <div class="d-grid gap-2">
-                                    <button style={{ backgroundColor: `${allValues?.sections[4].setting.customCSS.backgroundColor}`, textAlign: ` ${allValues?.sections[4].setting.customCSS.textAlign}`, }} class="btn btn-success mt-3" type="button">{allValues?.sections[4].setting.customCSS.text ? allValues?.sections[4].setting.customCSS.text : product?.allValues?.sections[4].setting.customCSS.text}</button>
+                                    <button style={{ backgroundColor: `${product?.allValues?.sections[4].setting.customCSS.backgroundColor}`, textAlign: ` ${product?.allValues?.sections[4].setting.customCSS.textAlign}`, }} class="btn btn-success mt-3" type="button">{allValues?.sections[4].setting.customCSS.text ? allValues?.sections[4].setting.customCSS.text : product?.allValues?.sections[4].setting.customCSS.text}</button>
                                 </div>
                                 <p className='text-center mt-3'>*Lorem, ipsum dolor sit amet consectetur adipisicing elit.  </p>
                             </div>
